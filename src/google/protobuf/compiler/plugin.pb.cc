@@ -380,8 +380,8 @@ void Version::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void Version::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.Version)
+PROTOBUF_NOINLINE void Version::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.Version)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -482,23 +482,20 @@ failure:
   cached_has_bits = _impl_._has_bits_[0];
   // optional int32 major = 1;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        1, this->_internal_major(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<1>(stream, this->_internal_major(), target);
   }
 
   // optional int32 minor = 2;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        2, this->_internal_minor(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<2>(stream, this->_internal_minor(), target);
   }
 
   // optional int32 patch = 3;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        3, this->_internal_patch(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<3>(stream, this->_internal_patch(), target);
   }
 
   // optional string suffix = 4;
@@ -596,9 +593,7 @@ void Version::CopyFrom(const Version& from) {
   MergeFrom(from);
 }
 
-bool Version::IsInitialized() const {
-  return true;
-}
+PROTOBUF_NOINLINE bool Version::IsInitialized() const { return true; }
 
 void Version::InternalSwap(Version* other) {
   using std::swap;
@@ -713,8 +708,8 @@ void CodeGeneratorRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void CodeGeneratorRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.CodeGeneratorRequest)
+PROTOBUF_NOINLINE void CodeGeneratorRequest::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.CodeGeneratorRequest)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -943,7 +938,7 @@ void CodeGeneratorRequest::CopyFrom(const CodeGeneratorRequest& from) {
   MergeFrom(from);
 }
 
-bool CodeGeneratorRequest::IsInitialized() const {
+PROTOBUF_NOINLINE bool CodeGeneratorRequest::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.proto_file_))
     return false;
   return true;
@@ -1092,8 +1087,8 @@ void CodeGeneratorResponse_File::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void CodeGeneratorResponse_File::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.CodeGeneratorResponse.File)
+PROTOBUF_NOINLINE void CodeGeneratorResponse_File::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.CodeGeneratorResponse.File)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1323,7 +1318,7 @@ void CodeGeneratorResponse_File::CopyFrom(const CodeGeneratorResponse_File& from
   MergeFrom(from);
 }
 
-bool CodeGeneratorResponse_File::IsInitialized() const {
+PROTOBUF_NOINLINE bool CodeGeneratorResponse_File::IsInitialized() const {
   return true;
 }
 
@@ -1427,8 +1422,8 @@ void CodeGeneratorResponse::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void CodeGeneratorResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.CodeGeneratorResponse)
+PROTOBUF_NOINLINE void CodeGeneratorResponse::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.compiler.CodeGeneratorResponse)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1618,7 +1613,7 @@ void CodeGeneratorResponse::CopyFrom(const CodeGeneratorResponse& from) {
   MergeFrom(from);
 }
 
-bool CodeGeneratorResponse::IsInitialized() const {
+PROTOBUF_NOINLINE bool CodeGeneratorResponse::IsInitialized() const {
   return true;
 }
 

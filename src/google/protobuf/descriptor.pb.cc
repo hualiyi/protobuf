@@ -1840,8 +1840,8 @@ void FileDescriptorSet::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void FileDescriptorSet::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.FileDescriptorSet)
+PROTOBUF_NOINLINE void FileDescriptorSet::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.FileDescriptorSet)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1959,7 +1959,7 @@ void FileDescriptorSet::CopyFrom(const FileDescriptorSet& from) {
   MergeFrom(from);
 }
 
-bool FileDescriptorSet::IsInitialized() const {
+PROTOBUF_NOINLINE bool FileDescriptorSet::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.file_))
     return false;
   return true;
@@ -2155,8 +2155,8 @@ void FileDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void FileDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.FileDescriptorProto)
+PROTOBUF_NOINLINE void FileDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.FileDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2680,7 +2680,7 @@ void FileDescriptorProto::CopyFrom(const FileDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool FileDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool FileDescriptorProto::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.message_type_))
     return false;
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.enum_type_))
@@ -2810,8 +2810,8 @@ void DescriptorProto_ExtensionRange::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void DescriptorProto_ExtensionRange::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.DescriptorProto.ExtensionRange)
+PROTOBUF_NOINLINE void DescriptorProto_ExtensionRange::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.DescriptorProto.ExtensionRange)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2899,16 +2899,14 @@ failure:
   cached_has_bits = _impl_._has_bits_[0];
   // optional int32 start = 1;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        1, this->_internal_start(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<1>(stream, this->_internal_start(), target);
   }
 
   // optional int32 end = 2;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        2, this->_internal_end(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<2>(stream, this->_internal_end(), target);
   }
 
   // optional .google.protobuf.ExtensionRangeOptions options = 3;
@@ -2998,7 +2996,7 @@ void DescriptorProto_ExtensionRange::CopyFrom(const DescriptorProto_ExtensionRan
   MergeFrom(from);
 }
 
-bool DescriptorProto_ExtensionRange::IsInitialized() const {
+PROTOBUF_NOINLINE bool DescriptorProto_ExtensionRange::IsInitialized() const {
   if ((_impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!_impl_.options_->IsInitialized()) return false;
   }
@@ -3078,8 +3076,8 @@ void DescriptorProto_ReservedRange::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void DescriptorProto_ReservedRange::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.DescriptorProto.ReservedRange)
+PROTOBUF_NOINLINE void DescriptorProto_ReservedRange::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.DescriptorProto.ReservedRange)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3154,16 +3152,14 @@ failure:
   cached_has_bits = _impl_._has_bits_[0];
   // optional int32 start = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        1, this->_internal_start(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<1>(stream, this->_internal_start(), target);
   }
 
   // optional int32 end = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        2, this->_internal_end(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<2>(stream, this->_internal_end(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3235,7 +3231,7 @@ void DescriptorProto_ReservedRange::CopyFrom(const DescriptorProto_ReservedRange
   MergeFrom(from);
 }
 
-bool DescriptorProto_ReservedRange::IsInitialized() const {
+PROTOBUF_NOINLINE bool DescriptorProto_ReservedRange::IsInitialized() const {
   return true;
 }
 
@@ -3363,8 +3359,8 @@ void DescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void DescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.DescriptorProto)
+PROTOBUF_NOINLINE void DescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.DescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3779,7 +3775,7 @@ void DescriptorProto::CopyFrom(const DescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool DescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool DescriptorProto::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.field_))
     return false;
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.nested_type_))
@@ -3934,8 +3930,8 @@ void ExtensionRangeOptions_Declaration::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void ExtensionRangeOptions_Declaration::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.ExtensionRangeOptions.Declaration)
+PROTOBUF_NOINLINE void ExtensionRangeOptions_Declaration::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.ExtensionRangeOptions.Declaration)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4054,9 +4050,8 @@ failure:
   cached_has_bits = _impl_._has_bits_[0];
   // optional int32 number = 1;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        1, this->_internal_number(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<1>(stream, this->_internal_number(), target);
   }
 
   // optional string full_name = 2;
@@ -4183,7 +4178,8 @@ void ExtensionRangeOptions_Declaration::CopyFrom(const ExtensionRangeOptions_Dec
   MergeFrom(from);
 }
 
-bool ExtensionRangeOptions_Declaration::IsInitialized() const {
+PROTOBUF_NOINLINE bool ExtensionRangeOptions_Declaration::IsInitialized()
+    const {
   return true;
 }
 
@@ -4265,8 +4261,8 @@ void ExtensionRangeOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void ExtensionRangeOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.ExtensionRangeOptions)
+PROTOBUF_NOINLINE void ExtensionRangeOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.ExtensionRangeOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4428,7 +4424,7 @@ void ExtensionRangeOptions::CopyFrom(const ExtensionRangeOptions& from) {
   MergeFrom(from);
 }
 
-bool ExtensionRangeOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool ExtensionRangeOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -4648,8 +4644,8 @@ void FieldDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void FieldDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.FieldDescriptorProto)
+PROTOBUF_NOINLINE void FieldDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.FieldDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4878,9 +4874,8 @@ failure:
 
   // optional int32 number = 3;
   if (cached_has_bits & 0x00000040u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        3, this->_internal_number(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<3>(stream, this->_internal_number(), target);
   }
 
   // optional .google.protobuf.FieldDescriptorProto.Label label = 4;
@@ -4922,9 +4917,9 @@ failure:
 
   // optional int32 oneof_index = 9;
   if (cached_has_bits & 0x00000080u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        9, this->_internal_oneof_index(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<9>(stream, this->_internal_oneof_index(),
+                                      target);
   }
 
   // optional string json_name = 10;
@@ -5098,7 +5093,7 @@ void FieldDescriptorProto::CopyFrom(const FieldDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool FieldDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool FieldDescriptorProto::IsInitialized() const {
   if ((_impl_._has_bits_[0] & 0x00000020u) != 0) {
     if (!_impl_.options_->IsInitialized()) return false;
   }
@@ -5217,8 +5212,8 @@ void OneofDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void OneofDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.OneofDescriptorProto)
+PROTOBUF_NOINLINE void OneofDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.OneofDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5382,7 +5377,7 @@ void OneofDescriptorProto::CopyFrom(const OneofDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool OneofDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool OneofDescriptorProto::IsInitialized() const {
   if ((_impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!_impl_.options_->IsInitialized()) return false;
   }
@@ -5461,8 +5456,8 @@ void EnumDescriptorProto_EnumReservedRange::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void EnumDescriptorProto_EnumReservedRange::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.EnumDescriptorProto.EnumReservedRange)
+PROTOBUF_NOINLINE void EnumDescriptorProto_EnumReservedRange::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.EnumDescriptorProto.EnumReservedRange)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5537,16 +5532,14 @@ failure:
   cached_has_bits = _impl_._has_bits_[0];
   // optional int32 start = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        1, this->_internal_start(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<1>(stream, this->_internal_start(), target);
   }
 
   // optional int32 end = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        2, this->_internal_end(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<2>(stream, this->_internal_end(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5618,7 +5611,8 @@ void EnumDescriptorProto_EnumReservedRange::CopyFrom(const EnumDescriptorProto_E
   MergeFrom(from);
 }
 
-bool EnumDescriptorProto_EnumReservedRange::IsInitialized() const {
+PROTOBUF_NOINLINE bool EnumDescriptorProto_EnumReservedRange::IsInitialized()
+    const {
   return true;
 }
 
@@ -5731,8 +5725,8 @@ void EnumDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void EnumDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.EnumDescriptorProto)
+PROTOBUF_NOINLINE void EnumDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.EnumDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5992,7 +5986,7 @@ void EnumDescriptorProto::CopyFrom(const EnumDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool EnumDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool EnumDescriptorProto::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.value_))
     return false;
   if ((_impl_._has_bits_[0] & 0x00000002u) != 0) {
@@ -6111,8 +6105,8 @@ void EnumValueDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void EnumValueDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.EnumValueDescriptorProto)
+PROTOBUF_NOINLINE void EnumValueDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.EnumValueDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6212,9 +6206,8 @@ failure:
 
   // optional int32 number = 2;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        2, this->_internal_number(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<2>(stream, this->_internal_number(), target);
   }
 
   // optional .google.protobuf.EnumValueOptions options = 3;
@@ -6304,7 +6297,7 @@ void EnumValueDescriptorProto::CopyFrom(const EnumValueDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool EnumValueDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool EnumValueDescriptorProto::IsInitialized() const {
   if ((_impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!_impl_.options_->IsInitialized()) return false;
   }
@@ -6418,8 +6411,8 @@ void ServiceDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void ServiceDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.ServiceDescriptorProto)
+PROTOBUF_NOINLINE void ServiceDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.ServiceDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6614,7 +6607,7 @@ void ServiceDescriptorProto::CopyFrom(const ServiceDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool ServiceDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool ServiceDescriptorProto::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.method_))
     return false;
   if ((_impl_._has_bits_[0] & 0x00000002u) != 0) {
@@ -6778,8 +6771,8 @@ void MethodDescriptorProto::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void MethodDescriptorProto::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.MethodDescriptorProto)
+PROTOBUF_NOINLINE void MethodDescriptorProto::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.MethodDescriptorProto)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7063,7 +7056,7 @@ void MethodDescriptorProto::CopyFrom(const MethodDescriptorProto& from) {
   MergeFrom(from);
 }
 
-bool MethodDescriptorProto::IsInitialized() const {
+PROTOBUF_NOINLINE bool MethodDescriptorProto::IsInitialized() const {
   if ((_impl_._has_bits_[0] & 0x00000008u) != 0) {
     if (!_impl_.options_->IsInitialized()) return false;
   }
@@ -7415,8 +7408,8 @@ void FileOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void FileOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.FileOptions)
+PROTOBUF_NOINLINE void FileOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.FileOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8169,7 +8162,7 @@ void FileOptions::CopyFrom(const FileOptions& from) {
   MergeFrom(from);
 }
 
-bool FileOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool FileOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -8315,8 +8308,8 @@ void MessageOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void MessageOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.MessageOptions)
+PROTOBUF_NOINLINE void MessageOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.MessageOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8589,7 +8582,7 @@ void MessageOptions::CopyFrom(const MessageOptions& from) {
   MergeFrom(from);
 }
 
-bool MessageOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool MessageOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -8753,8 +8746,8 @@ void FieldOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void FieldOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.FieldOptions)
+PROTOBUF_NOINLINE void FieldOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.FieldOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9226,7 +9219,7 @@ void FieldOptions::CopyFrom(const FieldOptions& from) {
   MergeFrom(from);
 }
 
-bool FieldOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool FieldOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -9308,8 +9301,8 @@ void OneofOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void OneofOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.OneofOptions)
+PROTOBUF_NOINLINE void OneofOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.OneofOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9440,7 +9433,7 @@ void OneofOptions::CopyFrom(const OneofOptions& from) {
   MergeFrom(from);
 }
 
-bool OneofOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool OneofOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -9543,8 +9536,8 @@ void EnumOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void EnumOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.EnumOptions)
+PROTOBUF_NOINLINE void EnumOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.EnumOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9764,7 +9757,7 @@ void EnumOptions::CopyFrom(const EnumOptions& from) {
   MergeFrom(from);
 }
 
-bool EnumOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool EnumOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -9858,8 +9851,8 @@ void EnumValueOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void EnumValueOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.EnumValueOptions)
+PROTOBUF_NOINLINE void EnumValueOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.EnumValueOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10021,7 +10014,7 @@ void EnumValueOptions::CopyFrom(const EnumValueOptions& from) {
   MergeFrom(from);
 }
 
-bool EnumValueOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool EnumValueOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -10111,8 +10104,8 @@ void ServiceOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void ServiceOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.ServiceOptions)
+PROTOBUF_NOINLINE void ServiceOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.ServiceOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10274,7 +10267,7 @@ void ServiceOptions::CopyFrom(const ServiceOptions& from) {
   MergeFrom(from);
 }
 
-bool ServiceOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool ServiceOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -10373,8 +10366,8 @@ void MethodOptions::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void MethodOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.MethodOptions)
+PROTOBUF_NOINLINE void MethodOptions::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.MethodOptions)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10577,7 +10570,7 @@ void MethodOptions::CopyFrom(const MethodOptions& from) {
   MergeFrom(from);
 }
 
-bool MethodOptions::IsInitialized() const {
+PROTOBUF_NOINLINE bool MethodOptions::IsInitialized() const {
   if (!_impl_._extensions_.IsInitialized(internal_default_instance())) {
     return false;
   }
@@ -10686,8 +10679,8 @@ void UninterpretedOption_NamePart::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void UninterpretedOption_NamePart::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.UninterpretedOption.NamePart)
+PROTOBUF_NOINLINE void UninterpretedOption_NamePart::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.UninterpretedOption.NamePart)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10859,7 +10852,7 @@ void UninterpretedOption_NamePart::CopyFrom(const UninterpretedOption_NamePart& 
   MergeFrom(from);
 }
 
-bool UninterpretedOption_NamePart::IsInitialized() const {
+PROTOBUF_NOINLINE bool UninterpretedOption_NamePart::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
@@ -11015,8 +11008,8 @@ void UninterpretedOption::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void UninterpretedOption::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.UninterpretedOption)
+PROTOBUF_NOINLINE void UninterpretedOption::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.UninterpretedOption)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11186,9 +11179,9 @@ failure:
 
   // optional int64 negative_int_value = 5;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(
-        5, this->_internal_negative_int_value(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<5>(
+            stream, this->_internal_negative_int_value(), target);
   }
 
   // optional double double_value = 6;
@@ -11324,7 +11317,7 @@ void UninterpretedOption::CopyFrom(const UninterpretedOption& from) {
   MergeFrom(from);
 }
 
-bool UninterpretedOption::IsInitialized() const {
+PROTOBUF_NOINLINE bool UninterpretedOption::IsInitialized() const {
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.name_))
     return false;
   return true;
@@ -11461,8 +11454,8 @@ void SourceCodeInfo_Location::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void SourceCodeInfo_Location::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.SourceCodeInfo.Location)
+PROTOBUF_NOINLINE void SourceCodeInfo_Location::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.SourceCodeInfo.Location)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11734,7 +11727,7 @@ void SourceCodeInfo_Location::CopyFrom(const SourceCodeInfo_Location& from) {
   MergeFrom(from);
 }
 
-bool SourceCodeInfo_Location::IsInitialized() const {
+PROTOBUF_NOINLINE bool SourceCodeInfo_Location::IsInitialized() const {
   return true;
 }
 
@@ -11806,8 +11799,8 @@ void SourceCodeInfo::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void SourceCodeInfo::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.SourceCodeInfo)
+PROTOBUF_NOINLINE void SourceCodeInfo::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.SourceCodeInfo)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11925,9 +11918,7 @@ void SourceCodeInfo::CopyFrom(const SourceCodeInfo& from) {
   MergeFrom(from);
 }
 
-bool SourceCodeInfo::IsInitialized() const {
-  return true;
-}
+PROTOBUF_NOINLINE bool SourceCodeInfo::IsInitialized() const { return true; }
 
 void SourceCodeInfo::InternalSwap(SourceCodeInfo* other) {
   using std::swap;
@@ -12040,8 +12031,8 @@ void GeneratedCodeInfo_Annotation::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void GeneratedCodeInfo_Annotation::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.GeneratedCodeInfo.Annotation)
+PROTOBUF_NOINLINE void GeneratedCodeInfo_Annotation::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.GeneratedCodeInfo.Annotation)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12176,16 +12167,14 @@ failure:
 
   // optional int32 begin = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        3, this->_internal_begin(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<3>(stream, this->_internal_begin(), target);
   }
 
   // optional int32 end = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(
-        4, this->_internal_end(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<4>(stream, this->_internal_end(), target);
   }
 
   // optional .google.protobuf.GeneratedCodeInfo.Annotation.Semantic semantic = 5;
@@ -12296,7 +12285,7 @@ void GeneratedCodeInfo_Annotation::CopyFrom(const GeneratedCodeInfo_Annotation& 
   MergeFrom(from);
 }
 
-bool GeneratedCodeInfo_Annotation::IsInitialized() const {
+PROTOBUF_NOINLINE bool GeneratedCodeInfo_Annotation::IsInitialized() const {
   return true;
 }
 
@@ -12370,8 +12359,8 @@ void GeneratedCodeInfo::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void GeneratedCodeInfo::Clear() {
-// @@protoc_insertion_point(message_clear_start:google.protobuf.GeneratedCodeInfo)
+PROTOBUF_NOINLINE void GeneratedCodeInfo::Clear() {
+  // @@protoc_insertion_point(message_clear_start:google.protobuf.GeneratedCodeInfo)
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12489,9 +12478,7 @@ void GeneratedCodeInfo::CopyFrom(const GeneratedCodeInfo& from) {
   MergeFrom(from);
 }
 
-bool GeneratedCodeInfo::IsInitialized() const {
-  return true;
-}
+PROTOBUF_NOINLINE bool GeneratedCodeInfo::IsInitialized() const { return true; }
 
 void GeneratedCodeInfo::InternalSwap(GeneratedCodeInfo* other) {
   using std::swap;
