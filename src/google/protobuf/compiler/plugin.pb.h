@@ -24,6 +24,7 @@
 #include "google/protobuf/io/coded_stream.h"
 #include "google/protobuf/arena.h"
 #include "google/protobuf/arenastring.h"
+#include "google/protobuf/generated_message_tctable_decl.h"
 #include "google/protobuf/generated_message_util.h"
 #include "google/protobuf/metadata_lite.h"
 #include "google/protobuf/generated_message_reflection.h"
@@ -309,6 +310,8 @@ class PROTOC_EXPORT Version final :
  private:
   class _Internal;
 
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::TcParser;
+  static const ::PROTOBUF_NAMESPACE_ID::internal::TcParseTable<2, 4, 0, 47, 2> _table_;
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -541,6 +544,8 @@ class PROTOC_EXPORT CodeGeneratorRequest final :
  private:
   class _Internal;
 
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::TcParser;
+  static const ::PROTOBUF_NAMESPACE_ID::internal::TcParseTable<3, 4, 2, 79, 2> _table_;
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -769,6 +774,8 @@ class PROTOC_EXPORT CodeGeneratorResponse_File final :
  private:
   class _Internal;
 
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::TcParser;
+  static const ::PROTOBUF_NAMESPACE_ID::internal::TcParseTable<2, 4, 1, 86, 2> _table_;
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -991,6 +998,8 @@ class PROTOC_EXPORT CodeGeneratorResponse final :
  private:
   class _Internal;
 
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::TcParser;
+  static const ::PROTOBUF_NAMESPACE_ID::internal::TcParseTable<2, 3, 1, 60, 2> _table_;
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
