@@ -24,7 +24,7 @@ if [[ ! -x "${PROTOC_PATH}" ]] ; then
   exit 1
 fi
 
-if [[ ! -e src/google/protobuf/stubs/common.h ]]; then
+if [[ ! -e src/google/protobuf/stubs/port.h ]]; then
   cat >&2 << __EOF__
 Could not find source code.  Make sure you are running this script from the
 root of the distribution tree.

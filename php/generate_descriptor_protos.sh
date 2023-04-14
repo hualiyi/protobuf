@@ -13,7 +13,7 @@ if [ ! -f $PROTOC ]; then
   PROTOC=$(pwd)/bazel-bin/protoc
 fi
 
-if test ! -e src/google/protobuf/stubs/common.h; then
+if test ! -e src/google/protobuf/stubs/port.h; then
   cat >&2 << __EOF__
 Could not find source code.  Make sure you are running this script from the
 root of the distribution tree.

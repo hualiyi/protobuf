@@ -44,7 +44,7 @@
 #include <utility>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "absl/container/btree_map.h"
 #include "absl/log/absl_check.h"
 #include "google/protobuf/port.h"

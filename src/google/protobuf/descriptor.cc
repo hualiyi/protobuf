@@ -46,7 +46,7 @@
 #include <type_traits>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "absl/base/call_once.h"
 #include "absl/base/casts.h"
 #include "absl/base/dynamic_annotations.h"

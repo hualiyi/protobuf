@@ -1,6 +1,6 @@
 # Bazel (https://bazel.build/) BUILD file for Protobuf.
 
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_proto_library")
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_proto_library", "cc_test")
 load("@rules_pkg//:mappings.bzl", "pkg_files", "strip_prefix")
 load("@rules_proto//proto:defs.bzl", "proto_lang_toolchain", "proto_library")
 load("@rules_java//java:defs.bzl", "java_lite_proto_library", "java_proto_library")
@@ -147,8 +147,8 @@ filegroup(
 internal_ruby_proto_library(
     name = "well_known_ruby_protos",
     srcs = [":well_known_protos"],
-    includes = ["src"],
     default_runtime = "",
+    includes = ["src"],
     visibility = [
         "//conformance:__pkg__",
         "//ruby:__subpackages__",
@@ -176,14 +176,14 @@ cc_binary(
 cc_binary(
     name = "protoc_static",
     copts = COPTS,
-    linkopts = LINK_OPTS,
     features = select({
-      # This isn't possible on mac because there is no static library for lcrt0.o
-      "@platforms//os:osx": [],
-      "//build_defs:config_osx": [],
-      # When cross-compiling we need to statically link all C++ libraries.
-      "//conditions:default": ["fully_static_link"],
+        # This isn't possible on mac because there is no static library for lcrt0.o
+        "@platforms//os:osx": [],
+        "//build_defs:config_osx": [],
+        # When cross-compiling we need to statically link all C++ libraries.
+        "//conditions:default": ["fully_static_link"],
     }),
+    linkopts = LINK_OPTS,
     visibility = ["//visibility:public"],
     deps = ["//src/google/protobuf/compiler:protoc_lib"],
 )
@@ -531,17 +531,43 @@ internal_ruby_proto_library(
         # The above must come first.
         "src",
     ],
-    deps = [":well_known_ruby_protos"],
     visibility = [
         "//conformance:__pkg__",
         "//ruby:__subpackages__",
     ],
+    deps = [":well_known_ruby_protos"],
 )
 
 filegroup(
     name = "bzl_srcs",
     srcs = glob(["**/*.bzl"]),
     visibility = ["//visibility:public"],
+)
+
+################################################################################
+# Other tests
+################################################################################
+
+cc_test(
+    name = "version_test",
+    srcs = [
+        "version_unittest.cc",
+    ],
+    copts = COPTS + select({
+        "//build_defs:config_msvc": [],
+        "//conditions:default": [
+            "-Wno-deprecated-declarations",
+        ],
+    }),
+    linkopts = LINK_OPTS,
+    deps = [
+        "//src/google/protobuf/stubs",
+        "//src/google/protobuf/stubs:lite",
+        "//src/google/protobuf/testing",
+        "@com_google_absl//absl/log:absl_log",
+        "@com_google_googletest//:gtest",
+        "@com_google_googletest//:gtest_main",
+    ],
 )
 
 ################################################################################

@@ -43,7 +43,7 @@
 #include <string>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/port.h"
 #include "absl/log/absl_check.h"
 #include "google/protobuf/io/coded_stream.h"

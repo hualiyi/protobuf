@@ -40,7 +40,7 @@
 
 #include <string>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "absl/base/call_once.h"
 #include "absl/base/casts.h"
 #include "absl/strings/string_view.h"

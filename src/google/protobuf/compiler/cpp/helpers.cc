@@ -44,7 +44,7 @@
 #include <utility>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/compiler/scc.h"
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/dynamic_message.h"

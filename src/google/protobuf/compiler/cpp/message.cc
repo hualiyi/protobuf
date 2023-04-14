@@ -45,7 +45,7 @@
 #include <utility>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/generated_message_util.h"
 #include "google/protobuf/map_entry_lite.h"

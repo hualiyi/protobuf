@@ -39,7 +39,7 @@
 #include <type_traits>
 #include <utility>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/arena.h"
 #include "absl/container/flat_hash_set.h"
 #include "absl/hash/hash.h"

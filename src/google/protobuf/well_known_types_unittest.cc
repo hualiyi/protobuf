@@ -29,7 +29,6 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <gtest/gtest.h>
 
-#include "google/protobuf/stubs/common.h"
 #include "google/protobuf/testing/googletest.h"
 #include "google/protobuf/unittest_well_known_types.pb.h"
 

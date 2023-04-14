@@ -51,7 +51,7 @@
 #include "google/protobuf/descriptor_legacy.h"
 #include "google/protobuf/unittest.pb.h"
 #include "google/protobuf/unittest_custom_options.pb.h"
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/descriptor.pb.h"
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/descriptor_database.h"

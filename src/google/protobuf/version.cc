@@ -30,7 +30,7 @@
 
 // Author: kenton@google.com (Kenton Varda)
 
-#include "google/protobuf/stubs/common.h"
+#include "google/protobuf/version.h"
 
 #include <errno.h>
 #include <stdio.h>

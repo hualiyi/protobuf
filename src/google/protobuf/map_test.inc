@@ -29,14 +29,6 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// A hack to include windows.h first, which ensures the GetMessage macro can
-// be undefined when we include <google/protobuf/stubs/common.h>
-#if defined(_MSC_VER)
-#define _WINSOCKAPI_  // to avoid re-definition in WinSock2.h
-#define NOMINMAX      // to avoid defining min/max macros
-#include <windows.h>
-#endif  // _WIN32
-
 #include <algorithm>
 #include <memory>
 #include <random>

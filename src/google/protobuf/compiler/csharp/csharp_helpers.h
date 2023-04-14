@@ -45,7 +45,7 @@
 #include "google/protobuf/io/printer.h"
 #include "google/protobuf/port.h"
 #include "google/protobuf/port_def.inc"
-#include "google/protobuf/stubs/common.h"
+
 
 namespace google {
 namespace protobuf {

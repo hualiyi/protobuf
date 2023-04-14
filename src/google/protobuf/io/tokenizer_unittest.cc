@@ -39,7 +39,7 @@
 
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "absl/strings/escaping.h"
 #include "absl/strings/substitute.h"
 #include "google/protobuf/io/zero_copy_stream_impl.h"

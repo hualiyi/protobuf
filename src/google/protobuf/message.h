@@ -115,12 +115,13 @@
 #include <type_traits>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/arena.h"
 #include "google/protobuf/port.h"
 #include "absl/base/attributes.h"
 #include "absl/base/call_once.h"
 #include "absl/base/casts.h"
+
 #include "absl/functional/function_ref.h"
 #include "absl/strings/cord.h"
 #include "absl/strings/string_view.h"

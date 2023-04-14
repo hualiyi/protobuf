@@ -35,7 +35,6 @@
 
 #include "absl/status/status.h"
 #include "absl/status/statusor.h"
-#include "google/protobuf/stubs/common.h"
 
 // Needs to be last.
 #include "google/protobuf/port_def.inc"  // NOLINT

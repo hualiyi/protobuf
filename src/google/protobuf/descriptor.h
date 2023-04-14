@@ -61,7 +61,7 @@
 #include <string>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/port.h"
 #include "absl/base/attributes.h"
 #include "absl/base/call_once.h"

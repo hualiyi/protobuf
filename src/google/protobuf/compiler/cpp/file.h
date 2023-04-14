@@ -41,7 +41,7 @@
 #include <string>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/compiler/scc.h"
 #include "absl/container/flat_hash_map.h"
 #include "absl/container/flat_hash_set.h"
@@ -56,6 +56,7 @@
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/io/printer.h"
 #include "google/protobuf/port.h"
+#include "google/protobuf/version.h"
 
 namespace google {
 namespace protobuf {

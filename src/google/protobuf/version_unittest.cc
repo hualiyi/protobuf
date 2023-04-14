@@ -30,7 +30,7 @@
 
 // Author: kenton@google.com (Kenton Varda)
 
-#include "google/protobuf/stubs/common.h"
+#include "google/protobuf/version.h"
 
 #include <gtest/gtest.h>
 
@@ -183,10 +183,10 @@ TEST_F(ClosureTest, TestClosureMethod2) {
   EXPECT_EQ(cstr, b_);
 }
 
-// Repeat all of the above with NewPermanentCallback()
+// Repeat all of the above with ::google::protobuf::NewPermanentCallback()
 
 TEST_F(ClosureTest, TestPermanentClosureFunction0) {
-  Closure* closure = NewPermanentCallback(&SetA123Function);
+  Closure* closure = ::google::protobuf::NewPermanentCallback(&SetA123Function);
   EXPECT_NE(123, a_);
   closure->Run();
   EXPECT_EQ(123, a_);
@@ -197,7 +197,7 @@ TEST_F(ClosureTest, TestPermanentClosureFunction0) {
 }
 
 TEST_F(ClosureTest, TestPermanentClosureMethod0) {
-  Closure* closure = NewPermanentCallback(current_instance_,
+  Closure* closure = ::google::protobuf::NewPermanentCallback(current_instance_,
                                           &ClosureTest::SetA123Method);
   EXPECT_NE(123, a_);
   closure->Run();
@@ -209,7 +209,7 @@ TEST_F(ClosureTest, TestPermanentClosureMethod0) {
 }
 
 TEST_F(ClosureTest, TestPermanentClosureFunction1) {
-  Closure* closure = NewPermanentCallback(&SetAFunction, 456);
+  Closure* closure = ::google::protobuf::NewPermanentCallback(&SetAFunction, 456);
   EXPECT_NE(456, a_);
   closure->Run();
   EXPECT_EQ(456, a_);
@@ -220,7 +220,7 @@ TEST_F(ClosureTest, TestPermanentClosureFunction1) {
 }
 
 TEST_F(ClosureTest, TestPermanentClosureMethod1) {
-  Closure* closure = NewPermanentCallback(current_instance_,
+  Closure* closure = ::google::protobuf::NewPermanentCallback(current_instance_,
                                           &ClosureTest::SetAMethod, 456);
   EXPECT_NE(456, a_);
   closure->Run();
@@ -233,7 +233,7 @@ TEST_F(ClosureTest, TestPermanentClosureMethod1) {
 
 TEST_F(ClosureTest, TestPermanentClosureFunction2) {
   const char* cstr = "hello";
-  Closure* closure = NewPermanentCallback(&SetABFunction, 789, cstr);
+  Closure* closure = ::google::protobuf::NewPermanentCallback(&SetABFunction, 789, cstr);
   EXPECT_NE(789, a_);
   EXPECT_NE(cstr, b_);
   closure->Run();
@@ -249,7 +249,7 @@ TEST_F(ClosureTest, TestPermanentClosureFunction2) {
 
 TEST_F(ClosureTest, TestPermanentClosureMethod2) {
   const char* cstr = "hello";
-  Closure* closure = NewPermanentCallback(current_instance_,
+  Closure* closure = ::google::protobuf::NewPermanentCallback(current_instance_,
                                           &ClosureTest::SetABMethod, 789, cstr);
   EXPECT_NE(789, a_);
   EXPECT_NE(cstr, b_);
@@ -265,7 +265,7 @@ TEST_F(ClosureTest, TestPermanentClosureMethod2) {
 }
 
 TEST_F(ClosureTest, TestPermanentClosureDeleteInCallback) {
-  permanent_closure_ = NewPermanentCallback((ClosureTest*) this,
+  permanent_closure_ = ::google::protobuf::NewPermanentCallback((ClosureTest*) this,
       &ClosureTest::DeleteClosureInCallback);
   permanent_closure_->Run();
 }

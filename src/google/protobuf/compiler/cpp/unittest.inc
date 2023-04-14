@@ -59,7 +59,7 @@
 #include "google/protobuf/unittest_enormous_descriptor.pb.h"
 #endif
 #include "google/protobuf/stubs/callback.h"
-#include "google/protobuf/stubs/common.h"
+
 #include "google/protobuf/compiler/cpp/helpers.h"
 #include "google/protobuf/unittest_no_generic_services.pb.h"
 #include "google/protobuf/descriptor.pb.h"

@@ -35,7 +35,7 @@
 #include <cstring>
 
 #include "absl/algorithm/container.h"
-#include "google/protobuf/stubs/common.h"
+
 #include "absl/strings/match.h"
 #include "absl/strings/string_view.h"
 #include "absl/types/span.h"

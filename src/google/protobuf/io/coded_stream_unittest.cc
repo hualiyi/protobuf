@@ -43,7 +43,7 @@
 #include <string>
 #include <vector>
 
-#include "google/protobuf/stubs/common.h"
+
 #include <gtest/gtest.h>
 #include "absl/base/casts.h"
 #include "absl/base/log_severity.h"
